@@ -1,9 +1,16 @@
 Introduction
 ============
 
-This is an addendum to the `MediaWiki print stylesheet <http://en.wikipedia.org/w/index.php?title=Facebook&printable=yes>`_ with good layout and typographic sensibilities. 
+MediaWiki allows you to define the print stylesheet for your installation. Here's `a sample <http://en.wikipedia.org/w/index.php?title=Facebook&printable=yes>`_ of a printable page. Very 1995, eh? 
 
-Given the number of possible elements, templates, and layouts an average MediaWiki page can assume, it will remain a work in progress for a while.
+The goal is to provide a basic print stylesheet, with good layout and typographic sensibilities. I would like to add support for commonly used elements (like `the infobox <http://en.wikipedia.org/wiki/Template:Infobox>`_). I'll be happy when I can render most of `these pages <http://stats.grok.se/en/top>`_ satisfactorily. 
+
+See the ``samples`` folder for progress. PDFs were generated on Firefox 17 with no header/footer information, and with background colors turned on.
+
+Compatibility
+=============
+
+Developed/tested on a vanilla installation of **v1.20.2**. 
 
 Installation
 ============
