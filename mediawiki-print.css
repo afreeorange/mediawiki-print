@@ -1,19 +1,12 @@
-/* CSS reset adapted from:
-    - Tim Murtaugh's HTML5 Reset <https://github.com/murtaugh/HTML5-Reset>
-    - Blueprint reset <http://blueprintcss.org/blueprint/src/reset.css>
-*/
 html,body,body div,span,object,iframe,h1,h2,h3,h4,h5,h6,a,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,figure,footer,header,hgroup,menu,nav,section,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;color:#222;font-family:"helvetica neue",helvetica,arial,sans-serif;vertical-align:baseline;}h1,h2,h3,h4,h5,h6{font-weight:bold}article,aside,figure,footer,header,hgroup,nav,section{display:block}img,object,embed{max-width:100%}ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}a{margin:0;padding:0;vertical-align:baseline;background:transparent}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted #000;cursor:help}table{font-size:inherit;font:100%;border-collapse:collapse;border-spacing:0}th{font-weight:bold;vertical-align:bottom}td{font-weight:normal;vertical-align:top}td,td img{vertical-align:top}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}.clickable,button,input,select,textarea{display:none}pre{white-space:pre;white-space:pre-wrap;white-space:pre-line;word-wrap:break-word}a:hover,a:active{outline:0}small{font-size:85%}strong,th{font-weight:bold}sub,sup{font-size:75%;line-height:0;position:relative}sup{top:-0.5em}sub{bottom:-0.25em}pre,code,kbd,samp{font-family:consolas,"lucida console","courier new",courier,monospace,sans-serif}.ie7 img{-ms-interpolation-mode:bicubic}.clearfix:before,.clearfix:after{content:"\0020";display:block;height:0;overflow:hidden}.clearfix:after{clear:both}.clearfix{zoom:1}
-
 html {
   font-size: 100.01%;
   background: white;
 }
-
-/* If you use inline styles (like Wikipedia), I'm irked by you */
 body,
 *[style] {
-  font-size: 75% !important;
-  line-height: 1.5;
+ font-size: 75% !important;
+ line-height: 1.5
 }
 h1 { font-size: 3em }
 h2 { font-size: 2em }
@@ -21,79 +14,84 @@ h3 { font-size: 1.5em }
 h4 { font-size: 1.2em }
 h5 { font-size: 1em }
 h6 { font-size: 1em }
-/* ===[ Article heading and source ]=== */
+
+/* Article heading and source */
 #firstHeading { text-align: center }
 #siteSub {
-  padding: 0 0 0.75em 0;
-  color: #999;
-  border-bottom: 0.5em solid #999 !important;
-  font-size: 1.5em;
-  font-weight: bold;
-  text-align: center;
-  display: block;
+ display: block;
+ margin: 1em 0 0 0;
+ color: #999;
+ font-size: 1.5em; font-weight: bold;
+ text-align: center
 }
 #contentSub { display: none }
 
-/* ===[ Table of Contents ]=== */
+/* Table of Contents */
 /* Typically not wrapped in div. Can't do two-columns */
 #toc {
-  width: 100%;
-  font-size: 120%;
-  background: none;
-  border: none!important;
-  /* Gets its own page */
-  page-break-after: always;
-  page-break-before: always;
+ width: 100%;
+ font-size: 125%;
+ /* Gets its own page */
+ background: none;
+ border: none!important;
+ page-break-after: always;
+ page-break-before: always;
 }
-#toc ul,
-#toc ol { list-style-type: none!important }
-#toc td > ul,
-#toc td > ol { margin: 1.5em 0 !important }
+#toc .tocnumber {
+ position: absolute;
+ left: 0.5em;
+ width: 4.5em;
+ padding: 0 0.5em 0 0;
+ font-weight: bold;
+ text-align: right
+}
+#toc .tocnumber:after { content: " " }
+#toc .toctext {
+ display: block;
+ margin: 0 0 0 6em
+}
 #toc h2 {
-  padding: 0.25em 0;
-  border-bottom: none !important;
-  text-align: center;
+ padding: 0.25em 0;
+ border-bottom: none !important;
+ text-align: center
 }
 #toc td { border: none!important }
-#toc .tocnumber {
-  font-weight: bold;
-  padding: 0 0.5em 0 0;
-  text-align: right;
-  width: 75px;
-  display: block;
-  float: left;
-  clear: both;
+#toc td > ul { margin: 1.5em 0 !important }
+#toc li {
+ position: relative;
+ padding-right: 4.5em
 }
+#toc ul { list-style-type: none!important }
 
-/* ===[ Article content ]=== */
+/* Article content */
 #bodyContent h2,
 h3,
 h4,
 h5 { clear: left }
-#bodyContent h2 { border-bottom: 0.2em solid #666 }
-#bodyContent h3 { border-bottom: 0.15em solid #999 }
-#bodyContent h4 { border-bottom: 0.1em solid #CCC }
-#bodyContent h5 { border-bottom: 0.1em dashed #999 }
 #bodyContent p {
-  margin: 1em 0;
-  line-height: 1.5;
+ margin: 1em 0;
+ line-height: 1.5
 }
 #bodyContent em,
 #bodyContent i { font-family: georgia, "times new roman", times, serif }
 #bodyContent ul,
 #bodyContent ol { margin: 0.75em 1.5em 0.75em 3em }
+#bodyContent p span,
+#bodyContent ul span,
+#bodyContent ol span,
+tr[style] { font-size: 1em!important }
 #bodyContent ul { list-style-type: disc }
 #bodyContent ol { list-style-type: decimal }
 #bodyContent pre {
-  padding: 0.75em;
-  border: 1px solid #CCC;
+ padding: 0.75em;
+ border: 1px solid #CCC
 }
 #bodyContent pre + pre { margin: 0.75em 0 0 0 }
 #bodyContent a.external.text { border-bottom: 1px solid #CCC }
 #bodyContent a.external.text:after,
 #content a.external.autonumber:after {
-  content: " <" attr(href) ">";
-  font-family: consolas, "lucida console", "courier new", courier, monospace, sans-serif;
+ content: " <" attr(href) ">";
+ font-family: consolas, "lucida console", "courier new", courier, monospace, sans-serif;
 }
 
 /* Hide pronounciation icon */
@@ -102,29 +100,27 @@ h5 { clear: left }
 /* Don't show links to main articles */
 #bodyContent .rellink { display: none }
 
-/* ===[ Tables ]=== */
+/* Tables */
 #bodyContent table { border-left: 1px solid #CCC }
+#bodyContent table .headerSort { background: none }
+#bodyContent table .sortheader { display: none }
 #bodyContent table caption {
-  padding: 0.5em 0;
-  font-size: 115%;
-  font-weight: bold;
-  border: 1px solid #CCC;
+ padding: 0.5em 0;
+ font-size: 115%; font-weight: bold;
+ border: 1px solid #CCC
 }
 #bodyContent table th,
 #bodyContent table td {
-  padding: 0.5em;
-  border-bottom: 1px solid #CCC;
-  border-right: 1px solid #CCC;
-  text-align: left;
-  vertical-align: top;
+ padding: 0.5em;
+ border-bottom: 1px solid #CCC; border-right: 1px solid #CCC;
+ text-align: left;
+ vertical-align: top
 }
-#bodyContent table .sortheader { display: none }
-#bodyContent table .headerSort { background: none }
 
-/* ===[ Footer ]=== */
+/* Footer */
 .printfooter {
-  padding: 1.5em 0 0 0;
-  font-size: 95%;
+ padding: 1.5em 0 0 0;
+ font-size: 95%
 }
 .printfooter a { font-weight: bold }
 /** Show categories?
@@ -141,24 +137,23 @@ h5 { clear: left }
 .catlinks,
 #catlinks { display: none }
 #footer {
-  font-size: 95%;
-  border: 0;
-  margin: 0!important;
-  padding: 0!important;
+ margin: 0!important; padding: 0!important;
+ font-size: 95%;
+ border: 0
 }
 #footer-places,
 .patrollink { display: none }
 
 /* Two columns for list of references */
 .reflist {
-  padding: 0.75em 0;
-  -moz-column-count: 2;
-  -moz-column-gap: 10px;
-  -webkit-column-count: 2;
-  -webkit-column-gap: 10px;
-  column-count: 2;
-  column-gap: 10px;
-  font-size: 0.75em!important;
+ padding: 0.75em 0;
+ font-size: 0.75em!important;
+ -moz-column-count: 2;
+ -moz-column-gap: 10px;
+ -webkit-column-count: 2;
+ -webkit-column-gap: 10px;
+ column-count: 2;
+ column-gap: 10px;
 }
 
 /* Hide all backlinks to article */
@@ -169,19 +164,22 @@ h5 { clear: left }
 /* Galleries */
 .gallery[style] { max-width: 100%!important }
 .gallery {
-  margin: 0.375em!important;
-  padding: 0!important;
-  font-size: 1.75em!important;
+ margin: 0.375em!important; padding: 0!important;
+ font-size: 1.75em!important
 }
-.thumb { font-size: 1.25em!important }
+.thumb {
+ font-size: 1.25em!important;
+ outline: 3px solid #EEE
+}
+
+/* Floating thumbs 'fall off page' otherwise */
+.tright { margin-right: 0.375em!important }
+.tleft { margin-left: 0.375em!important }
 
 /* Miscellaneous hacks for Wikipedia */
 .barbox { font-size: 1.5em!important }
-#bodyContent p span,
-#bodyContent ul span,
-#bodyContent ol span,
-tr[style] { font-size: 1em!important }
-
 thead { display: table-header-group }
 tfoot { display: table-footer-group }
 
+/* Remove the up arrow in references */
+.references li a[href*="#cite"] { display: none!important }
