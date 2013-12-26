@@ -2,7 +2,7 @@ MediaWiki allows you to define the print stylesheet for your installation. Here'
 
 The goal is to provide a basic print stylesheet, with good layout and typographic sensibilities. I would like to add support for commonly used elements/templates (like [the infobox](http://en.wikipedia.org/wiki/Template:Infobox)). I'll be happy when I can render most of [these pages](http://stats.grok.se/en/top) satisfactorily. 
 
-[Here's a sample](https://www.dropbox.com/s/euuiduca6ahery2/commit-05.pdf).
+[Here's a sample](https://dl.dropboxusercontent.com/u/32824099/mediawiki-print/commit-05.pdf).
 
 Compatibility
 -------------
