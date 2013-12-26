@@ -1,4 +1,4 @@
-MediaWiki allows you to define the print stylesheet for your installation. Here's [a sample](http://en.wikipedia.org/w/index.php?title=Facebook&printable=yes) of a printable page. Very 1995, eh? 
+MediaWiki allows you to define the print stylesheet for your installation. Here's [a sample](http://en.wikipedia.org/w/index.php?title=Facebook&printable=yes) of a printable page.
 
 The goal is to provide a basic print stylesheet, with good layout and typographic sensibilities. I would like to add support for commonly used elements/templates (like [the infobox](http://en.wikipedia.org/wiki/Template:Infobox)). I'll be happy when I can render most of [these pages](http://stats.grok.se/en/top) satisfactorily. 
 
@@ -28,5 +28,5 @@ Built Using
 License
 -------
 
-Copyright 2013 Nikhil Anand <nikhil@mantralay.org>
-dd
+Copyright 2013 Nikhil Anand <mail@nikhil.io>
+
